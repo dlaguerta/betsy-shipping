@@ -20,18 +20,23 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 ### DATABASE ###
 # Use postgresql as the database for Active Record in production only
-gem 'pg', '~> 0.15', group: :production
+# gem 'pg', '~> 0.15', group: :production
 
 # Otherwise, use sqlite
-gem 'sqlite3', group: [:development, :test]
+# gem 'sqlite3', group: [:development, :test]
 
 ### OAUTH ###
 gem 'omniauth-github'
 
+group :production do
+  gem 'pg', '~> 0.15'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
+  gem 'sqlite3'
 end
 
 group :development do
