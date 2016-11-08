@@ -37,6 +37,8 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'sqlite3'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
 
 group :development do
